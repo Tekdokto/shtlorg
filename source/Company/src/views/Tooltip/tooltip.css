@@ -1,0 +1,122 @@
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;    
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: auto;
+  background-color: #222222;
+  color: #fff;
+  text-align: center;
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 15px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  left: 100%;
+  margin-left: -60
+}
+
+.tooltip .right {
+  left: 35px;
+  right: auto;
+}
+
+.tooltip .left {
+  left: auto;
+  right: 37px;    
+}
+
+.tooltip .top {
+  left: -14px;
+  right: 0;
+  margin: -40px auto 0;
+  width: 50px
+}
+
+.tooltip .bottom {
+  left: -14px;
+  right: 0;
+  margin: 27px auto 0;
+  width: 50px
+}
+
+.tooltip span.right:before {
+  content:'';
+  display:block;
+  width:0;
+  height:0;
+  position:absolute;
+  
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent; 
+  border-right:8px solid #222222;
+  left:-8px;
+  
+  top:8px;
+  right: auto
+}
+
+.tooltip span.left:before {
+content:'';
+display:block;
+width:0;
+height:0;
+position:absolute;
+
+border-top: 8px solid transparent;
+border-bottom: 8px solid transparent; 
+border-left:8px solid #222222;
+left:auto;
+  
+top:8px;
+right: -7px
+}
+
+.tooltip span.top:before {
+content:'';
+display:block;
+width:0;
+height:0;
+position:absolute;
+
+border-right: 8px solid transparent;
+border-bottom: 8px solid transparent; 
+border-left:8px solid #222222;
+left: 0;
+bottom: 0;
+right: 0;
+transform: rotate(-135deg);
+margin: auto;
+}
+
+.tooltip span.bottom:before {
+content:'';
+display:block;
+width:0;
+height:0;
+position:absolute;
+
+border-top: 8px solid transparent;
+border-right: 8px solid transparent; 
+border-left:8px solid #222222;
+left: 0;
+top: 0;
+right: 0;
+transform: rotate(135deg);
+margin: auto;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.tooltip .tooltiptext:hover {
+  visibility: hidden;
+}

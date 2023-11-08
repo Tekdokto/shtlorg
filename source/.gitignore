@@ -1,0 +1,13 @@
+/node_modules
+
+/Company-frontend/node_modules
+/Company-frontend/out/
+/Company-frontend/build
+
+/Student-frontend/node_modules
+/Student-frontend/out/
+/Student-frontend/build
+
+/Admin-frontend/node_modules
+/Admin-frontend/out/
+/Admin-frontend/build

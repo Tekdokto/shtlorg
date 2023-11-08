@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <link href="/../stylesheets/login.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+
+<body class="">
+    <div class="container-fluid register register-new">
+        <div class="row" id="pwd-container">
+
+            <div class="cl"></div>
+            <div class="col-sm-12 col-md-12">
+                <div class="header">
+                    <img src="images/login-logo.png" class="img-responsive" alt="" /> </div>
+                <section id="login-box" class="form-box login-form">
+                    <div id="alertboxdiv">
+                       
+                            <div class="alertbeforelogin " id="alert_msg">
+                                <span>
+                                 
+                                </span>
+                            </div> 
+                    </div>
+
+                    <form method="post" id="register_form"name="register_form" class="register-form-new" action="/submitform"
+                        role="register">
+                        <div class="body bg-gray">
+                            <div class="form-group">
+                                <label class="control-label">Name</label>
+                                <input type="text" name="name" id="name" value="" class="form-control"
+                                    />
+                               
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Email</label>
+                                <input type="email" name="email" id="email" value="" class="form-control"
+                                    required/>
+                                
+                            </div>
+                            <div class="form-group ">
+                                <label class="control-label">Password</label>
+                                <input type="password" name="password" id="password" value="" class="form-control " />
+                               
+                            </div>
+                           
+                           
+                           
+                          
+                            
+                        </div>
+                        <div class="footer register">
+                            <div class="cl"></div>
+                          
+                            <div class="cl">
+                                <button type="button" name="signup" id="signup" class="btn btn-lg btn-primary btn-block registerbtn">Register</button>
+                                
+
+                            </div>
+                           
+                            <div class="fb-login-button" data-size="small" data-button-type="login_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
+                        </div>
+
+                        <fb:login-button 
+  scope="public_profile,email"
+  >
+</fb:login-button>
+                    </form>
+                </section>
+            </div>
+
+        </div>
+</body>
+
+</html>
+
+
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v7.0&appId=288095485540239&autoLogAppEvents=1"></script>
+<script>
+    window.fbAsyncInit = function() {
+      FB.init({
+        appId      : '45454564565',
+        cookie     : true,
+        xfbml      : true,
+        version    : 'v7.0'
+      });
+        
+      FB.AppEvents.logPageView();   
+      FB.getLoginStatus(function(response) {
+            console.log("Response",response)
+        });
+    };
+  
+    (function(d, s, id){
+       var js, fjs = d.getElementsByTagName(s)[0];
+       if (d.getElementById(id)) {return;}
+       js = d.createElement(s); js.id = id;
+       js.src = "https://connect.facebook.net/en_US/sdk.js";
+       fjs.parentNode.insertBefore(js, fjs);
+     }(document, 'script', 'facebook-jssdk'));
+
+     
+  </script>
